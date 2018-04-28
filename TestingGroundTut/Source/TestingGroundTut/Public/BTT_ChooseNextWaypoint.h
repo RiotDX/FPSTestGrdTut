@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTTaskNode.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
-#include "ThirdPersonGuard.h"
 #include "BTT_ChooseNextWaypoint.generated.h"
 
 class UPatrolWaypoints;
