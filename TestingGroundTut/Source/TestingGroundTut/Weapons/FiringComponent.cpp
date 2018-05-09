@@ -3,6 +3,7 @@
 #include "FiringComponent.h"
 #include "Engine/World.h"
 #include "BallProjectile.h"
+#include "GameFramework/Actor.h"
 
 
 // Sets default values for this component's properties
@@ -26,6 +27,8 @@ void UFiringComponent::Fire() {
 		auto SpawnTransform = GetComponentTransform();
 
 		World->SpawnActor<ABallProjectile>(ProjectileClass, SpawnTransform.GetLocation(), SpawnTransform.GetRotation().Rotator(), ActorSpawnParams);
+
+		GetAttachmentRootActor()->MakeNoise(1, nullptr, GetComponentLocation());
 	}
 }
 
